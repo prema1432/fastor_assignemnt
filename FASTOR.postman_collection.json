@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "3e849467-243f-46c1-a33e-560ef04615d3",
+		"name": "FASTOR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ALL USERS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjQyNjA0LCJqdGkiOiI2NmVhZDgyZmY0ZDI0MTZkYTlkNWQwNTYyNWEzZjFmOCIsInVzZXJfaWQiOjF9.lE9SET6wUkr27z0y5iqhsDuiTEAUdZ0Wc3d0rDceB18",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{my_local}}api/users/all/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "85sdsd99@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "prema@143",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{my_local}}api/login/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LOGIN REFRESH",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjMxOTY4LCJqdGkiOiJlMTE3YTI2YjYzYTg0YmI0YjkyNGY2ZDYyYWNjMDA3OSIsInVzZXJfaWQiOjF9.ZIoSj5DUaoD_hjgnonjknXQSMeJe_KMx09M8QpUU534",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MjMxODA2MCwianRpIjoiNzJiZTJiZmJjNmRkNDZlNjgxNzg0Y2IyOTJmNTg4MDgiLCJ1c2VyX2lkIjoxfQ.gmHBS3n678AEURf9yUpslVapkmcs58-WTjn25_Kupvc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{my_local}}api/login/refresh/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"login",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjMyMzk4LCJqdGkiOiJmOWRlYTIxYzJiYjM0MjA1OWQ3OTI4YmQ4OTI5YzljYiIsInVzZXJfaWQiOjF9.D1pxqAV5no4I5rvSrC-DfpUJTnb3VjatBz8V0z1QtEE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh_token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MjMxODQ5OCwianRpIjoiNTc3YjJlOGY1ZGM1NDIwY2IwZGVlZGQ2NmVkMzNiMDMiLCJ1c2VyX2lkIjoxfQ.bXwYW7bkTVIYpUqwAVcU7nNeniV9-LI36612AyidDMc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{fp_local}}api/logout/",
+					"host": [
+						"{{fp_local}}api"
+					],
+					"path": [
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EMPLOYEES LIST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjQyNjA0LCJqdGkiOiI2NmVhZDgyZmY0ZDI0MTZkYTlkNWQwNTYyNWEzZjFmOCIsInVzZXJfaWQiOjF9.lE9SET6wUkr27z0y5iqhsDuiTEAUdZ0Wc3d0rDceB18",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{my_local}}api/users/employees/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjQyNjA0LCJqdGkiOiI2NmVhZDgyZmY0ZDI0MTZkYTlkNWQwNTYyNWEzZjFmOCIsInVzZXJfaWQiOjF9.lE9SET6wUkr27z0y5iqhsDuiTEAUdZ0Wc3d0rDceB18",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"password\": \"prema@143\",\n        \"name\": \"lavany5999a\",\n        \"email\": \"85sdsd@gmail.com\",\n        \"phone_number\": \"8071201233\"\n    },\n    \"department\": \"250\",\n    \"year_of_exp\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{my_local}}api/users/employees/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ENQUIRYFORMS - REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"student\": {\n        \"password\": \"prema@143\",\n        \"name\": \"sweetyy5999a\",\n        \"email\": \"sweety@gmail.com\",\n        \"phone_number\": \"8186886443\"\n    },\n    \"department\": \"HrDepartment\",\n    \"course\": \"Fullstack\",\n    \"semester\":\"Middle Senior\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{my_local}}api/users/enquiryforms/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"enquiryforms",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ENQUIRYFORMS - GET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjQ1NDkwLCJqdGkiOiJlYzlhMzgzZmQzNGI0NzEyODI3MTk2OWRmODQ5Zjk2NCIsInVzZXJfaWQiOjF9.ck9JBwvDBNNHcH5nEmslr5FeIzQfnQ9poDFqHySz0ck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{my_local}}api/users/enquiryforms/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"enquiryforms",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adminenquiryforms - Employee And Superadmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjQ3MjI4LCJqdGkiOiI3M2RlNTFiNTlkZGM0OTg1YThmMDhiZjI1NGFhMjQ1ZCIsInVzZXJfaWQiOjZ9.8QLsPpnn6kEqxzn8Rnz4m8bpt-kM2DmIP6Umep1opQk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{my_local}}api/users/adminenquiryforms/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"adminenquiryforms",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CLAIM ENQUIRY FORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQyMjQ3MjI4LCJqdGkiOiI3M2RlNTFiNTlkZGM0OTg1YThmMDhiZjI1NGFhMjQ1ZCIsInVzZXJfaWQiOjZ9.8QLsPpnn6kEqxzn8Rnz4m8bpt-kM2DmIP6Umep1opQk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{my_local}}api/users/claimenquiryforms/3/",
+					"host": [
+						"{{my_local}}api"
+					],
+					"path": [
+						"users",
+						"claimenquiryforms",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
